@@ -187,6 +187,9 @@ function RenderCode(props: { codeBlock: CodeBlock, sx?: SxProps }) {
         position: 'relative', mx: 0, p: 1.5, // this block gets a thicker border
         display: 'block', fontWeight: 500,
         whiteSpace: 'break-spaces',
+        wordWrap: 'break-word',
+        wordBreak: 'break-word',
+        hyphens: 'none',
         '&:hover > .code-buttons': { opacity: 1 },
         ...(props.sx || {}),
       }}>

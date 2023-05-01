@@ -35,6 +35,7 @@ export default function Home() {
     <NoSSR>
 
       <Container maxWidth={centerMode === 'full' ? false : centerMode === 'narrow' ? 'md' : 'xl'} disableGutters sx={{
+        background: theme.palette.neutral.solidBg,
         boxShadow: {
           xs: 'none',
           md: centerMode === 'narrow' ? theme.vars.shadow.md : 'none',

@@ -1,5 +1,5 @@
 import createCache from '@emotion/cache';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { /*Inter,*/ JetBrains_Mono } from 'next/font/google';
 import { extendTheme } from '@mui/joy';
 import { keyframes } from '@emotion/react';
 
@@ -16,12 +16,12 @@ export const settingsMaxWidth: number = 500;
 
 // Theme & Fonts
 
-const inter = Inter({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['Helvetica', 'Arial', 'sans-serif'],
-});
+// const inter = Inter({
+//   weight: ['400', '500', '600', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+//   fallback: ['Helvetica', 'Arial', 'sans-serif'],
+// });
 
 const jetBrainsMono = JetBrains_Mono({
   weight: ['400', '500', '600', '700'],
@@ -30,9 +30,20 @@ const jetBrainsMono = JetBrains_Mono({
   fallback: ['monospace'],
 });
 
+const themeHarlan = {
+  palette: {
+    primary: {
+      500: 'rgb(118,108,172)', // Harlan purple
+      solidBg: 'rgb(118,108,172)', // Harlan purple
+      solidHoverBg: 'rgb(84,75,145)', // Harlan purple
+      solidActiveBg: 'rgb(84,75,145, 0.9)', // Harlan purple
+    }
+  }
+}
+
 export const theme = extendTheme({
   fontFamily: {
-    body: inter.style.fontFamily,
+    body: 'system-ui, sans-serif',
     code: jetBrainsMono.style.fontFamily,
   },
   colorSchemes: {
@@ -47,11 +58,14 @@ export const theme = extendTheme({
           // 200: '#ADDBFF',
           // 300: '#6FB6FF',
           // 400: '#3990FF',
-          // 500: '#096BDE', // solidBg [Button.solid]  -  #096BDE | #0D46D7 (suggested)
+          500: themeHarlan.palette.primary[500],
           // 600: '#054DA7', // solidHoverBg [IconButton.plain (fg)]
           // 700: '#02367D',
           // 800: '#072859',
           // 900: '#00153C',
+          solidBg: themeHarlan.palette.primary.solidBg,
+          solidHoverBg: themeHarlan.palette.primary.solidHoverBg,
+          solidActiveBg: themeHarlan.palette.primary.solidActiveBg,
         },
         neutral: {
           solidBg: 'var(--joy-palette-neutral-700, #434356)',
@@ -71,6 +85,12 @@ export const theme = extendTheme({
     },
     dark: {
       palette: {
+        primary: {
+          500: themeHarlan.palette.primary[500],
+          solidBg: themeHarlan.palette.primary.solidBg,
+          solidHoverBg: themeHarlan.palette.primary.solidHoverBg,
+          solidActiveBg: themeHarlan.palette.primary.solidActiveBg,
+        },
         background: {
           surface: 'var(--joy-palette-neutral-900, #131318)',
           level1: 'var(--joy-palette-common-black, #09090D)',
@@ -83,7 +103,7 @@ export const theme = extendTheme({
   },
 });
 
-export const bodyFontClassName = inter.className;
+export const bodyFontClassName = 'systemUI';
 
 export const cssRainbowColorKeyframes = keyframes`
   100%, 0% {

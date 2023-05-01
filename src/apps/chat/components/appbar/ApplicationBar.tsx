@@ -225,6 +225,7 @@ export function ApplicationBar(props: {
     <Sheet
       variant='solid' color='neutral' invertedColors
       sx={{
+        backgroundColor: 'var(--joy-palette-primary-solidBg, rgb(118,108,172))',
         p: 1,
         display: 'flex', flexDirection: 'row', justifyContent: 'space-between',
         ...(props.sx || {}),
@@ -314,7 +315,7 @@ export function ApplicationBar(props: {
         Clear conversation
       </MenuItem>
 
-      <SupportItem />
+      {/* <SupportItem /> */}
     </Menu>
 
 

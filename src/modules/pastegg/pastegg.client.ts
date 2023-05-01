@@ -21,7 +21,7 @@ export async function callPublish(gg: 'paste.gg', fileContent: string, fileName:
 
   const body: PasteGG.API.Publish.RequestBody = {
     to: gg,
-    title: '🤖💬 Chat Conversation',
+    title: 'GPT Conversation',
     fileContent,
     fileName,
     origin: getOrigin(),
