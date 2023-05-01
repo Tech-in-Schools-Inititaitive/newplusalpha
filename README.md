@@ -1,3 +1,20 @@
+# This is Harlan's personal fork
+
+Keep `main` to date with upstream:
+1. `git fetch upstream`
+2. `git checkout main`
+3. `git merge upstream/main`
+
+Create a new branch based on upstream:
+1. `git fetch upstream`
+2. `git checkout -b <my-branch> upstream/main`
+
+---
+
+Upstream readme below:
+
+---
+
 # `BIG-AGI` 🤖💬
 
 Welcome to `big-AGI`, FKA `nextjs-chatgpt-app`. 👋🎉
