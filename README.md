@@ -1,16 +1,5 @@
 # This is Harlan's personal fork
 
-Keep `main` to date with upstream:
-1. `git fetch upstream`
-2. `git checkout main`
-3. `git merge upstream/main`
-
-Create a new branch based on upstream:
-1. `git fetch upstream`
-2. `git checkout -b <my-branch> upstream/main`
-
----
-
 Upstream readme below:
 
 ---
@@ -142,3 +131,16 @@ This project is licensed under the MIT License.
 [//]: # ([![GitHub issues]&#40;https://img.shields.io/github/issues/enricoros/big-agi&#41;]&#40;https://github.com/enricoros/big-agi/issues&#41;)
 
 Made with 💙
+
+---
+
+# GitHub fork cheatsheet
+
+Keep `main` up to date with upstream:
+1. `git fetch upstream`
+2. `git checkout main`
+3. `git merge upstream/main`
+
+Create a new branch based on upstream:
+1. `git fetch upstream`
+2. `git checkout -b <my-branch> upstream/main`
