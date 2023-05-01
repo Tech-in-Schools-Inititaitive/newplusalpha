@@ -140,7 +140,9 @@ export function PurposeSelector(props: { conversationId: string, runExample: (ex
           <Typography level='body2' color='neutral'>
             Select an AI purpose
           </Typography>
-          <Button variant='plain' color='neutral' size='sm' onClick={toggleEditMode}>
+          <Button 
+            variant={editMode ? 'solid' : 'outlined'}
+            color='neutral' size='sm' onClick={toggleEditMode}>
             {editMode ? 'Done' : 'Edit'}
           </Button>
         </Box>
