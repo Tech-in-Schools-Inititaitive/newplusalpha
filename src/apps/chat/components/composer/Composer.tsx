@@ -409,9 +409,8 @@ export function Composer(props: {
         <Grid xs={12} md={9}><Stack direction='row' spacing={{ xs: 1, md: 2 }}>
 
           {/* Vertical Buttons Bar */}
+          {/*
           <Stack>
-
-            {/*<Typography level='body3' sx={{mb: 2}}>Context</Typography>*/}
 
             {isSpeechEnabled && <Box sx={{ mb: { xs: 1, md: 2 }, ...hideOnDesktop }}>
               <MicButton variant={micVariant} color={micColor} onClick={handleMicClicked} />
@@ -446,6 +445,7 @@ export function Composer(props: {
             <input type='file' multiple hidden ref={attachmentFileInputRef} onChange={handleLoadAttachment} />
 
           </Stack>
+          */}
 
           {/* Edit box, with Drop overlay */}
           <Box sx={{ flexGrow: 1, position: 'relative' }}>
@@ -470,8 +470,8 @@ export function Composer(props: {
                 }}
                 sx={{
                   background: theme.vars.palette.background.level1,
-                  fontSize: '16px',
-                  lineHeight: 1.75,
+                  fontSize: '0.875rem',
+                  lineHeight: 1.5,
                 }} />
 
               {tokenLimit > 0 && (directTokens > 0 || indirectTokens > 0) && <TokenProgressbar direct={directTokens} indirect={indirectTokens} limit={tokenLimit} />}
