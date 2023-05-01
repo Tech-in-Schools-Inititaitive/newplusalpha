@@ -17,6 +17,12 @@ export const AppBarDropdown = <TValue extends string>(props: { value: TValue, it
       root: {
         sx: {
           backgroundColor: 'transparent',
+          '&:hover': {
+            backgroundColor: 'var(--variant-plainHoverBg)',
+          },
+          '&:active': {
+            backgroundColor: 'var(--variant-plainActiveBg)',
+          }
         },
       },
       listbox: {
