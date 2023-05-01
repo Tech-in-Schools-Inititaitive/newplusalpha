@@ -1,6 +1,9 @@
-export type SystemPurposeId = 'Catalyst' | 'Custom' | 'Designer' | 'Developer' | 'Executive' | 'Generic' | 'Scientist';
+import type { SystemPurposeId as CustomSystemPurposeId } from './data-custom';
+import { SystemPurposes as CustomSystemPurposes } from './data-custom';
 
-export const defaultSystemPurposeId: SystemPurposeId = 'Generic';
+export type SystemPurposeId = 'Catalyst' | 'Custom' | 'Designer' | 'Developer' | 'Executive' | 'Generic' | 'Scientist' | CustomSystemPurposeId;
+
+export const defaultSystemPurposeId: SystemPurposeId = 'Custom';
 
 type SystemPurposeData = {
   title: string;
@@ -12,6 +15,7 @@ type SystemPurposeData = {
 }
 
 export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
+  ...CustomSystemPurposes,
   Developer: {
     title: 'Developer',
     description: 'Helps you code',
