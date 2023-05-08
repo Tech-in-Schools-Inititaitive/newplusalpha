@@ -1,4 +1,4 @@
-name: Sync Fork with Upstream
+name: Catchup branch synced with upstream
 on:
   schedule:
     - cron: '0 0 * * *' # Run every day at midnight
