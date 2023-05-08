@@ -1,0 +1,21 @@
+name: Sync Fork with Upstream
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run every day at midnight
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main-upstream-synced # My fork's branch
+          repository: harlanlewis/nextjs-chatgpt-app # My fork
+      - name: Fetch upstream changes
+        run: git fetch upstream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge upstream changes
+        run: git merge upstream/main --ff-only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
