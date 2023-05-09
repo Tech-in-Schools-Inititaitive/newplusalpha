@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: main # My fork's branch
           repository: harlanlewis/nextjs-chatgpt-app # My fork
@@ -19,4 +19,3 @@ jobs:
         run: git merge upstream/main --ff-only
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
