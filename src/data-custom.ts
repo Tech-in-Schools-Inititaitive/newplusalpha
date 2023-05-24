@@ -10,7 +10,7 @@ const promptTemplates = {
   math: 'You are not good at math. Show your work.',
   repetition: 'Do not repeat yourself or the user.',
   affirmations: 'Do not respond with "great question", "good question", etc. Do not apologize.',
-  evaluateResponse: 'At the end of your response, answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
+  evaluateResponse: 'At the end of your response, ask and answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
   dates: `Knowledge cutoff: 2021-09, current date (today): ${new Date().toISOString().slice(0, 10)}.`,
 }
 
