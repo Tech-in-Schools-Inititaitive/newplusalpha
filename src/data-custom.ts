@@ -7,6 +7,7 @@ const promptTemplates = {
   onTopic: `Stay on topic. If you're acting the role of a character, you are never allowed to break character.`,
   competence: 'You are a leading expert on the discussed subject.',
   stepByStep: `Let's work this out in a step by step way to be sure we have the right answer.`,
+  math: 'You are not good at math. Show your work.',
   repetition: 'Do not repeat yourself or the user.',
   affirmations: 'Do not respond with "great question", "good question", etc. Do not apologize.',
   evaluateResponse: 'At the end of your response, answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
