@@ -8,7 +8,8 @@ const promptTemplates = {
   competence: 'You are a leading expert on the discussed subject.',
   stepByStep: `Let's work this out in a step by step way to be sure we have the right answer.`,
   repetition: 'Do not repeat yourself or the user.',
-  responseAffirmations: 'Do not respond with "great question", "good question", etc. Do not apologize.',
+  affirmations: 'Do not respond with "great question", "good question", etc. Do not apologize.',
+  evaluateResponse: 'At the end of your response, answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
   dates: `Knowledge cutoff: 2021-09, current date (today): ${new Date().toISOString().slice(0, 10)}.`,
 }
 
