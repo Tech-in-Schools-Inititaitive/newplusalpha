@@ -2,16 +2,15 @@ export type SystemPurposeId =  'Generalist' | 'Todo' | 'Develop' | 'Design' | 'T
 
 const promptTemplates = {
   // Statements are printed in source order. Order matters!
-  deterministic: 'Depending on the request, you must speak as either an expert in all topics, or as a deterministic computer.',
-  terse: 'Your responses should be terse and precise, unless the user asks otherwise.',
-  onTopic: `Stay on topic. If you're acting the role of a character, you are never allowed to break character.`,
-  competence: 'You are a leading expert on the discussed subject.',
-  stepByStep: `Let's work this out in a step by step way to be sure we have the right answer.`,
-  math: 'You are not good at math. Show your work.',
-  repetition: 'Do not repeat yourself or the user.',
-  affirmations: 'Do not respond with "great question", "good question", etc. Do not apologize.',
-  evaluateResponse: 'At the end of your response, ask and answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
-  dates: `Knowledge cutoff: 2021-09, current date (today): ${new Date().toISOString().slice(0, 10)}.`,
+  terse: '- Your responses should be terse and precise, unless the user asks otherwise.',
+  onTopic: `- Stay on topic. If you're acting the role of a character, you are never allowed to break character.`,
+  competence: '- You are a leading expert in the field.',
+  stepByStep: `- Work problems out in a step by step way to be sure we have the right answer.`,
+  math: '- You are not good at math. Show your work.',
+  repetition: `- Do not repeat yourself, or repeat the user's question.`,
+  affirmations: '- Do not respond with "great question", "good question", etc. Do not apologize.',
+  evaluateResponse: '- At the end of your response, ask and answer the question "Did this response meet the assignment?", then provide a terse list of recommended improvements.',
+  dates: `- Knowledge cutoff: 2021-09, current date (today): ${new Date().toISOString().slice(0, 10)}.`,
 }
 
 const promptTemplatesAll = Object.values(promptTemplates).join('\n');
